@@ -9,11 +9,26 @@ export const ContainerSection = styled.section`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  @media ${({ theme }) => theme.device.laptopM} {
+    padding: 6rem 0;
+  }
+
+  @media ${({ theme }) => theme.device.mobileL} {
+    padding: 3.5rem 0;
+  }
+  @media ${({ theme }) => theme.device.mobileM} {
+    padding: 2.5rem 0;
+  }
 `
 
 export const Title = styled.h1`
   color: ${({ theme }) => theme['blue-500']};
   margin-bottom: 2rem;
+
+  @media ${({ theme }) => theme.device.tabletL} {
+    margin-bottom: 0rem;
+  }
 `
 
 export const ContainerMain = styled.div`
@@ -22,6 +37,10 @@ export const ContainerMain = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: row;
+
+  @media ${({ theme }) => theme.device.tabletL} {
+    flex-direction: column;
+  }
 `
 
 export const ContainerImage = styled(motion.div)`
@@ -38,6 +57,11 @@ export const ContainerImage = styled(motion.div)`
     width: 100%;
     height: 100%;
   }
+
+  @media ${({ theme }) => theme.device.tabletL} {
+    height: 20rem;
+    padding-bottom: 0rem;
+  }
 `
 
 export const ContainerForm = styled(motion.form)`
@@ -47,12 +71,19 @@ export const ContainerForm = styled(motion.form)`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  flex-wrap: nowrap;
 
   border: 1px solid ${({ theme }) => theme.white};
   border-radius: 8px;
 
   gap: 2rem;
+
+  @media ${({ theme }) => theme.device.tabletS} {
+    width: 100%;
+  }
+
+  @media ${({ theme }) => theme.device.mobileL} {
+    padding: 1rem;
+  }
 `
 export const Label = styled.label`
   width: 100%;
@@ -62,9 +93,14 @@ export const Label = styled.label`
   flex-direction: row;
   font-weight: bold;
   color: ${({ theme }) => theme.white};
+
+  @media ${({ theme }) => theme.device.mobileL} {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 `
 export const Input = styled.input`
-  width: 71%;
+  width: 70%;
   padding: 0.5rem 1rem;
   background: ${({ theme }) => theme.white};
   border: 0;
@@ -77,6 +113,10 @@ export const Input = styled.input`
   &::placeholder {
     color: ${({ theme }) => theme['gray-500']};
   }
+
+  @media ${({ theme }) => theme.device.mobileL} {
+    width: 85%;
+  }
 `
 
 export const LabelTextArea = styled.label`
@@ -88,8 +128,14 @@ export const LabelTextArea = styled.label`
   gap: 0.5rem;
   font-weight: bold;
   color: ${({ theme }) => theme.white};
+
+  @media ${({ theme }) => theme.device.mobileL} {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 `
 export const TextArea = styled.textarea`
+  width: 70% !important;
   resize: none;
   padding: 0.5rem 1rem;
   background: ${({ theme }) => theme.white};
@@ -102,6 +148,10 @@ export const TextArea = styled.textarea`
 
   &::placeholder {
     color: ${({ theme }) => theme['gray-500']};
+  }
+
+  @media ${({ theme }) => theme.device.mobileL} {
+    width: 85% !important;
   }
 `
 

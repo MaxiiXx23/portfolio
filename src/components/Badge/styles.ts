@@ -20,6 +20,10 @@ export const WrapperBadge = styled.a`
     z-index: -1;
     opacity: 0;
     font-size: 1.125rem;
+
+    @media ${({ theme }) => theme.device.tabletM} {
+      display: none;
+    }
   }
 
   &:hover {

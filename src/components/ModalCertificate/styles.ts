@@ -35,10 +35,34 @@ export const Content = styled(Dialog.Content)`
     width: 100%;
     height: 50%;
   }
+
+  @media ${({ theme }) => theme.device.tabletM} {
+    width: 24rem;
+  }
+
+  @media ${({ theme }) => theme.device.tabletS} {
+    width: 20rem;
+  }
+
+  @media ${({ theme }) => theme.device.mobileL} {
+    width: 18rem;
+  }
+
+  @media ${({ theme }) => theme.device.mobileM} {
+    width: 16rem;
+  }
+
+  @media ${({ theme }) => theme.device.mobileM} {
+    width: 14rem;
+  }
 `
 
 export const Title = styled(Dialog.DialogTitle)`
   color: ${({ theme }) => theme['blue-500']};
+
+  @media ${({ theme }) => theme.device.mobileL} {
+    font-size: 1rem;
+  }
 `
 
 export const DetailsFooter = styled.footer`
@@ -72,6 +96,21 @@ export const ContainerLabel = styled.label`
   justify-content: center;
   flex-direction: row;
   gap: 0.5rem;
+
+  @media ${({ theme }) => theme.device.mobileL} {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  @media ${({ theme }) => theme.device.mobileM} {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  @media ${({ theme }) => theme.device.mobileM} {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 `
 export const WrapperIconCopy = styled.button`
   cursor: pointer;

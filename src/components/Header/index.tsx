@@ -45,7 +45,7 @@ export function Header() {
           target="__blank"
         >
           Contact on WhatsApp
-          <FaWhatsapp size={24} />
+          <FaWhatsapp />
         </BtnContact>
       </ContainerMain>
     </ContainerNav>

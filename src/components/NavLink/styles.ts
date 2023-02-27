@@ -16,5 +16,20 @@ export const ContainerLink = styled.li<IContainerLink>`
         pageCurrentIsSelected ? theme['blue-500'] : 'transparent'};
     text-decoration: none;
     color: ${({ theme }) => theme.white};
+
+    @media ${({ theme }) => theme.device.laptopS} {
+      font-size: 0.875rem;
+    }
+
+    @media ${({ theme }) => theme.device.tabletL} {
+      font-size: 0.875rem;
+    }
+
+    @media ${({ theme }) => theme.device.tabletL} {
+      font-size: 0.75rem;
+    }
+    @media ${({ theme }) => theme.device.tabletS} {
+      font-size: 0.625rem;
+    }
   }
 `

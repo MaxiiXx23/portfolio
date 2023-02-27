@@ -9,11 +9,26 @@ export const ContainerSection = styled.section`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  @media ${({ theme }) => theme.device.laptopM} {
+    padding: 6rem 0;
+  }
+
+  @media ${({ theme }) => theme.device.mobileL} {
+    padding: 3.5rem 0;
+  }
+  @media ${({ theme }) => theme.device.mobileM} {
+    padding: 2.5rem 0;
+  }
 `
 
 export const Title = styled.h1`
   margin-bottom: 2rem;
   color: ${({ theme }) => theme['blue-500']};
+
+  @media ${({ theme }) => theme.device.tabletM} {
+    margin-bottom: 1rem;
+  }
 `
 
 export const ContainerMain = styled.div`
@@ -22,6 +37,10 @@ export const ContainerMain = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: row;
+
+  @media ${({ theme }) => theme.device.tabletM} {
+    flex-direction: column;
+  }
 `
 
 export const ContainerImage = styled(motion.div)`
@@ -31,6 +50,10 @@ export const ContainerImage = styled(motion.div)`
   img {
     width: 100%;
     height: 100%;
+  }
+
+  @media ${({ theme }) => theme.device.tabletM} {
+    height: 16rem;
   }
 `
 
@@ -43,6 +66,11 @@ export const ListSkills = styled(motion.div)`
   grid-template-columns: auto auto;
   gap: 1rem;
   row-gap: 1rem;
+
+  @media ${({ theme }) => theme.device.tabletM} {
+    grid-template-columns: auto;
+    margin-top: 1rem;
+  }
 `
 
 export const Card = styled.div`
@@ -52,5 +80,10 @@ export const Card = styled.div`
   img {
     width: 100%;
     height: 100%;
+
+    object-fit: cover;
+  }
+  @media ${({ theme }) => theme.device.tabletM} {
+    height: 2rem;
   }
 `

@@ -5,7 +5,8 @@ export const size = {
   tabletS: '600px',
   tabletM: '660px',
   tabletL: '768px',
-  laptop: '1024px',
+  laptopS: '860px',
+  laptopM: '1024px',
   laptopL: '1440px',
   desktop: '2560px',
 } as const
@@ -36,9 +37,9 @@ export const defaultTheme = {
     tabletS: `(max-width: ${size.tabletS})`,
     tabletM: `(max-width: ${size.tabletM})`,
     tabletL: `(max-width: ${size.tabletL})`,
-    laptop: `(max-width: ${size.laptop})`,
+    laptopS: `(max-width: ${size.laptopS})`,
+    laptopM: `(max-width: ${size.laptopM})`,
     laptopL: `(max-width: ${size.laptopL})`,
     desktop: `(max-width: ${size.desktop})`,
-    desktopL: `(max-width: ${size.desktop})`,
   },
 } as const

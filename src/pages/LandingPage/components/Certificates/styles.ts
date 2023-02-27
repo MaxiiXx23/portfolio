@@ -9,6 +9,17 @@ export const ContainerSection = styled.section`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  @media ${({ theme }) => theme.device.laptopM} {
+    padding: 6rem 0;
+  }
+
+  @media ${({ theme }) => theme.device.mobileL} {
+    padding: 3.5rem 0;
+  }
+  @media ${({ theme }) => theme.device.mobileM} {
+    padding: 2.5rem 0;
+  }
 `
 
 export const ContainerMain = styled.div`
@@ -17,11 +28,19 @@ export const ContainerMain = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: row;
+
+  @media ${({ theme }) => theme.device.tabletL} {
+    flex-direction: column;
+  }
 `
 
 export const Title = styled.h1`
   margin-bottom: 2rem;
   color: ${({ theme }) => theme['blue-500']};
+
+  @media ${({ theme }) => theme.device.tabletL} {
+    margin-bottom: 0rem;
+  }
 `
 
 export const ContainerImage = styled(motion.div)`
@@ -31,6 +50,10 @@ export const ContainerImage = styled(motion.div)`
   img {
     width: 100%;
     height: 100%;
+  }
+
+  @media ${({ theme }) => theme.device.tabletL} {
+    height: 20rem;
   }
 `
 
@@ -43,6 +66,10 @@ export const ListCertificates = styled(motion.ul)`
   flex-direction: column;
   gap: 1rem;
   list-style-type: none;
+
+  @media ${({ theme }) => theme.device.tabletL} {
+    margin-top: 0rem;
+  }
 `
 
 export const ContainerSelect = styled.li`
@@ -58,10 +85,33 @@ export const ContainerSelect = styled.li`
   flex-wrap: nowrap;
 
   color: ${({ theme }) => theme['black-500']};
+
+  @media ${({ theme }) => theme.device.laptopS} {
+    width: 20rem;
+  }
+  @media ${({ theme }) => theme.device.tabletL} {
+    width: 18rem;
+  }
+
+  @media ${({ theme }) => theme.device.mobileL} {
+    width: 15rem;
+  }
 `
 
 export const Name = styled.strong`
   line-height: 1.6;
+
+  @media ${({ theme }) => theme.device.laptopS} {
+    font-size: 0.875rem;
+  }
+
+  @media ${({ theme }) => theme.device.tabletL} {
+    font-size: 0.75rem;
+  }
+
+  @media ${({ theme }) => theme.device.mobileL} {
+    font-size: 0.625rem;
+  }
 `
 export const WrapperArrow = styled.div`
   cursor: pointer;

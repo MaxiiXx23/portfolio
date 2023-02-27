@@ -9,6 +9,17 @@ export const ContainerSection = styled.section`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  @media ${({ theme }) => theme.device.laptopM} {
+    padding: 6rem 0;
+  }
+
+  @media ${({ theme }) => theme.device.mobileL} {
+    padding: 3.5rem 0;
+  }
+  @media ${({ theme }) => theme.device.mobileM} {
+    padding: 2.5rem 0;
+  }
 `
 
 export const ContainerAbout = styled.div`
@@ -17,6 +28,10 @@ export const ContainerAbout = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: row;
+
+  @media ${({ theme }) => theme.device.tabletL} {
+    flex-direction: column;
+  }
 `
 
 export const ContainerImage = styled(motion.div)`
@@ -26,6 +41,9 @@ export const ContainerImage = styled(motion.div)`
   img {
     width: 100%;
     height: 100%;
+  }
+  @media ${({ theme }) => theme.device.tabletM} {
+    height: 20rem;
   }
 `
 export const ContainerMainText = styled(motion.div)`
@@ -39,6 +57,10 @@ export const ContainerMainText = styled(motion.div)`
   p {
     text-align: justify;
     line-height: 1.4;
+  }
+
+  @media ${({ theme }) => theme.device.tabletL} {
+    gap: 1rem;
   }
 `
 export const Title = styled.h1`

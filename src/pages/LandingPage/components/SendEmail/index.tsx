@@ -23,6 +23,7 @@ import {
 } from './styles'
 
 import AnimationEmail from '../../../../assets/animations/AnimationEmail.json'
+import { FaPaperPlane } from 'react-icons/fa'
 
 interface IFormInputs {
   email: string
@@ -168,7 +169,7 @@ export function SendEmail() {
             />
           </LabelTextArea>
           <BtnSendEmail type="submit" disabled={isSubmitting}>
-            Send
+            Send <FaPaperPlane />
           </BtnSendEmail>
         </ContainerForm>
       </ContainerMain>

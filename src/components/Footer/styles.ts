@@ -22,7 +22,9 @@ export const ContainerAnimation = styled.div`
   }
 `
 
-export const Copyright = styled.strong``
+export const Copyright = styled.strong`
+  text-align: center;
+`
 
 export const ContainerSocialMedias = styled.div`
   width: 100%;

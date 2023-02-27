@@ -33,6 +33,18 @@ export const ContainerMain = styled.div<IContainerMain>`
         ${({ theme }) => theme['purple-800']}
     )
       `};
+
+  @media ${({ theme }) => theme.device.laptopS} {
+    padding: 1rem 2rem;
+  }
+
+  @media ${({ theme }) => theme.device.tabletM} {
+    padding: 1rem 2rem;
+  }
+
+  @media ${({ theme }) => theme.device.tabletM} {
+    padding: 1rem 1.5rem;
+  }
 `
 
 export const ContainerAvatar = styled.div`
@@ -53,6 +65,21 @@ export const ContainerAvatar = styled.div`
 export const Avatar = styled.img`
   width: 60px;
   height: 60px;
+
+  @media ${({ theme }) => theme.device.tabletL} {
+    width: 55px;
+    height: 55px;
+  }
+
+  @media ${({ theme }) => theme.device.tabletM} {
+    width: 50px;
+    height: 50px;
+  }
+
+  @media ${({ theme }) => theme.device.tabletS} {
+    width: 40px;
+    height: 40px;
+  }
 `
 
 export const ListNav = styled.ul`
@@ -61,6 +88,22 @@ export const ListNav = styled.ul`
   justify-content: center;
   gap: 2rem;
   list-style-type: none;
+
+  @media ${({ theme }) => theme.device.laptopS} {
+    gap: 1.5rem;
+  }
+
+  @media ${({ theme }) => theme.device.tabletL} {
+    gap: 1.5rem;
+  }
+
+  @media ${({ theme }) => theme.device.tabletL} {
+    gap: 1rem;
+  }
+
+  @media ${({ theme }) => theme.device.tabletS} {
+    gap: 0.625rem;
+  }
 `
 
 export const BtnContact = styled.a`
@@ -83,9 +126,49 @@ export const BtnContact = styled.a`
   line-height: 1.4;
   text-decoration: none;
 
+  svg {
+    font-size: 24px;
+  }
+
   &:hover {
     opacity: 1;
 
     transition: 0.3s;
+  }
+
+  @media ${({ theme }) => theme.device.laptopS} {
+    padding: 0.5rem 0.875rem;
+    font-size: 0.875rem;
+
+    svg {
+      font-size: 20px;
+    }
+  }
+
+  @media ${({ theme }) => theme.device.tabletL} {
+    padding: 0.5rem 0.875rem;
+    font-size: 0.875rem;
+
+    svg {
+      font-size: 20px;
+    }
+  }
+
+  @media ${({ theme }) => theme.device.tabletM} {
+    padding: 0.5rem 0.875rem;
+    font-size: 0.625rem;
+
+    svg {
+      font-size: 16px;
+    }
+  }
+
+  @media ${({ theme }) => theme.device.tabletS} {
+    padding: 0.5rem 0.875rem;
+    font-size: 0.625rem;
+
+    svg {
+      font-size: 16px;
+    }
   }
 `

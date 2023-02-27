@@ -2,12 +2,23 @@ import styled, { keyframes } from 'styled-components'
 import { motion } from 'framer-motion'
 
 export const ContaienrSection = styled.section`
-  padding: 8rem 0rem;
+  padding: 8rem 0;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
+  @media ${({ theme }) => theme.device.laptopM} {
+    padding: 6rem 0;
+  }
+
+  @media ${({ theme }) => theme.device.mobileL} {
+    padding: 3.5rem 0;
+  }
+  @media ${({ theme }) => theme.device.mobileM} {
+    padding: 2.5rem 0;
+  }
 `
 export const ContainerPresentation = styled.div`
   width: 100%;
@@ -16,6 +27,14 @@ export const ContainerPresentation = styled.div`
   justify-content: center;
   flex-direction: row;
   gap: 2rem;
+
+  @media ${({ theme }) => theme.device.tabletM} {
+    flex-direction: column;
+  }
+  @media ${({ theme }) => theme.device.mobileL} {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 `
 
 export const WrapperImage = styled(motion.div)`
@@ -25,6 +44,11 @@ export const WrapperImage = styled(motion.div)`
   img {
     width: 100%;
     height: 100%;
+    /* object-fit: cover; */
+  }
+
+  @media ${({ theme }) => theme.device.tabletM} {
+    height: 20rem;
   }
 `
 
@@ -36,6 +60,11 @@ export const WrapperTextPresentation = styled(motion.div)`
   flex-direction: column;
 
   gap: 3rem;
+
+  @media ${({ theme }) => theme.device.mobileL} {
+    flex-direction: column;
+    gap: 2rem;
+  }
 `
 
 const animationTextHello = keyframes`
@@ -79,11 +108,29 @@ export const TextStack = styled.strong`
 
 // Container Social Medias
 
-export const ContainerBadges = styled(motion.div)`
+export const ContainerMainBadges = styled(motion.div)`
   width: 100%;
   padding-top: 3rem;
+`
+
+export const ContainerBadges = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
+
+  @media ${({ theme }) => theme.device.laptopM} {
+    margin-left: 15%;
+  }
+  @media ${({ theme }) => theme.device.laptopS} {
+    margin-left: 20%;
+  }
+  @media ${({ theme }) => theme.device.tabletL} {
+    margin-left: 25%;
+  }
+
+  @media ${({ theme }) => theme.device.tabletM} {
+    margin-left: 0;
+    gap: 4rem;
+  }
 `
