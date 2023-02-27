@@ -3,6 +3,7 @@ import { Header } from '../../components/Header'
 import { AboutMe } from './components/AboutMe'
 import { Certificates } from './components/Certificates'
 import { Home } from './components/Home'
+import { SendEmail } from './components/SendEmail'
 import { Skills } from './components/Skills'
 import { Container, ContainerMain } from './styles'
 
@@ -15,6 +16,7 @@ export function LandingPage() {
         <AboutMe />
         <Skills />
         <Certificates />
+        <SendEmail />
       </Container>
       <Footer />
     </ContainerMain>

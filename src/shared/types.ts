@@ -3,6 +3,7 @@ enum SelectedPage {
   AboutMe = 'aboutme',
   Skills = 'skills',
   Certificates = 'certificates',
+  SendEmail = 'sendemail',
 }
 
 export { SelectedPage }

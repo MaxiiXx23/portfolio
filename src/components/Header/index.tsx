@@ -38,6 +38,7 @@ export function Header() {
           <NavLink page="About Me" />
           <NavLink page="Skills" />
           <NavLink page="Certificates" />
+          <NavLink page="Send Email" />
         </ListNav>
         <BtnContact
           href={`https://wa.me/5511983716296?text=${messageFormatted}`}
