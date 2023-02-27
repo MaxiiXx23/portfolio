@@ -51,10 +51,10 @@ export function AboutMe() {
 
           <ContainerText>
             <p>
-              I'm Max Jonatas, i have got 23 years old. Graduated Technician in
-              Analysis and systems development by ETEC in 2020, at the moment
-              I'm on 1° semester in Analysis and systems development by Uninter
-              and student of Rocketseat too. I'm Full Stack developer focused in
+              I'm Max Jônatas, i have got 23 years old. Graduated Technician in
+              Systems Development by ETEC in 2020, at the moment I'm on 1°
+              semester in Analysis and systems development by Uninter and
+              student of Rocketseat too. I'm Full Stack developer focused in
               React.JS, React Native and Node.js, working specifically with
               Typescript.
             </p>

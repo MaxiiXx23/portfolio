@@ -55,9 +55,9 @@ export function Home() {
           </TextHello>
           <TextPresentation>
             {/* eslint-disable-next-line react/no-unescaped-entities */}
-            I'm Max Jonatas a <TextStack>Full Stack Developer</TextStack> with
+            I'm Max Jônatas a <TextStack>Full Stack Developer</TextStack> with
             focus in <strong>React.JS</strong>, <strong>React Native</strong>{' '}
-            and <strong>Node.js</strong>
+            and <strong>Node.js</strong>.
           </TextPresentation>
         </WrapperTextPresentation>
       </ContainerPresentation>

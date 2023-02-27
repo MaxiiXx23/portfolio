@@ -1,6 +1,7 @@
 import DiplomaNodeRocketseatPNG from '../assets/certificates/diplomaNodejs.png'
 import DiplomaReactNativeRocketseatPNG from '../assets/certificates/diplomaReactNative.png'
 import DiplomaFigmaRocketseatPNG from '../assets/certificates/cursoFigma.png'
+import DiplomaETEC from '../assets/certificates/certificadoETECEdited.jpg'
 
 interface ICertificate {
   id: string
@@ -11,6 +12,11 @@ interface ICertificate {
 }
 
 export const dataCertificates: ICertificate[] = [
+  {
+    id: '879f7423-7a70-4e92-8991-7fe18825201c',
+    title: 'Técnico em Desenvolvimento de Sistemas',
+    imageUrl: DiplomaETEC,
+  },
   {
     id: '166c43ab-e532-409b-8b01-b0f231b6d470',
     title: 'Trilha Node.js Rocketseat',

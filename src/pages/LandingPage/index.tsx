@@ -1,3 +1,4 @@
+import { Footer } from '../../components/Footer'
 import { Header } from '../../components/Header'
 import { AboutMe } from './components/AboutMe'
 import { Certificates } from './components/Certificates'
@@ -15,6 +16,7 @@ export function LandingPage() {
         <Skills />
         <Certificates />
       </Container>
+      <Footer />
     </ContainerMain>
   )
 }

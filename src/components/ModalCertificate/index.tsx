@@ -42,18 +42,20 @@ export function ModalCertificate({
         </CloseButton>
         <img src={imageUrl} alt="" />
         <DetailsFooter>
-          <Link href={link} target="__blank">
-            See on the official site
-            <FaArrowRight size={16} />
-          </Link>
           {link ? (
-            <ContainerLabel>
-              Code of the certificate:
-              <span id="code">{code}</span>
-              <WrapperIconCopy onClick={handleCopyCode}>
-                <FaCopy size={16} />
-              </WrapperIconCopy>
-            </ContainerLabel>
+            <>
+              <Link href={link} target="__blank">
+                See on the official site
+                <FaArrowRight size={16} />
+              </Link>
+              <ContainerLabel>
+                Code of the certificate:
+                <span id="code">{code}</span>
+                <WrapperIconCopy onClick={handleCopyCode}>
+                  <FaCopy size={16} />
+                </WrapperIconCopy>
+              </ContainerLabel>
+            </>
           ) : null}
         </DetailsFooter>
       </Content>
