@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 interface IContainerLink {
   pageCurrentIsSelected: boolean
+  // isOpenMenuHamburguer: boolean
 }
 
 export const ContainerLink = styled.li<IContainerLink>`
@@ -25,11 +26,8 @@ export const ContainerLink = styled.li<IContainerLink>`
       font-size: 0.875rem;
     }
 
-    @media ${({ theme }) => theme.device.tabletL} {
-      font-size: 0.75rem;
-    }
     @media ${({ theme }) => theme.device.tabletS} {
-      font-size: 0.625rem;
+      font-size: 0.75rem;
     }
   }
 `

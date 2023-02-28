@@ -4,6 +4,7 @@ export const ContainerNav = styled.nav`
   top: 0;
   position: fixed;
   width: 100%;
+  max-width: 100%;
   z-index: 1;
 `
 
@@ -62,6 +63,19 @@ export const ContainerAvatar = styled.div`
   overflow: hidden;
 `
 
+export const BtnMenu = styled.button`
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  border: 0;
+  box-shadow: none;
+
+  background: transparent;
+  color: ${({ theme }) => theme.white};
+`
+
 export const Avatar = styled.img`
   width: 60px;
   height: 60px;
@@ -97,7 +111,7 @@ export const ListNav = styled.ul`
     gap: 1.5rem;
   }
 
-  @media ${({ theme }) => theme.device.tabletL} {
+  @media ${({ theme }) => theme.device.tabletM} {
     gap: 1rem;
   }
 
@@ -171,4 +185,41 @@ export const BtnContact = styled.a`
       font-size: 16px;
     }
   }
+`
+
+// menu hamburguer
+
+export const ContainerMainHamburguer = styled.nav`
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  padding: 1rem 2rem;
+
+  background: ${({ theme }) => theme['black-500']};
+`
+
+export const ContainerButtonClose = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`
+
+export const ListMenuHamburguer = styled.ul`
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 3rem;
+
+  list-style-type: none;
 `
