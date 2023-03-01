@@ -5,6 +5,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import { toast } from 'react-toastify'
 import { useLottie } from 'lottie-react'
+import axios from 'axios'
 
 import { ScrollContext } from '../../../../contexts/scrollContext'
 import { SelectedPage } from '../../../../shared/types'
@@ -66,9 +67,38 @@ export function SendEmail() {
 
   const { View } = useLottie(options)
 
-  function handleSubmitEmail(data: IFormInputs) {
-    console.log(data)
-    reset()
+  async function handleSubmitEmail(data: IFormInputs) {
+    try {
+      await axios.post('https://formsubmit.co/max.232017@gmail.com', {
+        name: data.name,
+        email: data.email,
+        message: data.message,
+      })
+
+      toast.success('Email send with successful.', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      })
+
+      reset()
+    } catch (error) {
+      toast.error('Error to send email. Please, try again.', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      })
+    }
   }
 
   useEffect(() => {
@@ -127,8 +157,6 @@ export function SendEmail() {
         </ContainerImage>
         <ContainerForm
           onSubmit={handleSubmit(handleSubmitEmail)}
-          action="https://formsubmit.co/max.232017@gmail.com"
-          method="POST"
           onViewportEnter={() => changeSelectedPage(SelectedPage.SendEmail)}
           initial="hidden"
           whileInView="visible"
