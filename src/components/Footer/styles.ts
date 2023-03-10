@@ -6,6 +6,10 @@ export const ContainerSection = styled.footer`
   align-items: center;
   justify-content: center;
   flex-direction: row;
+
+  @media ${({ theme }) => theme.device.tabletS} {
+    flex-direction: column-reverse;
+  }
 `
 export const ContainerAnimation = styled.div`
   width: 100%;
