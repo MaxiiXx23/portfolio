@@ -14,6 +14,10 @@ export const ContainerSection = styled.section`
     padding: 6rem 0;
   }
 
+  @media ${({ theme }) => theme.device.laptopS} {
+    width: 90%;
+  }
+
   @media ${({ theme }) => theme.device.mobileL} {
     padding: 3.5rem 0;
   }
@@ -57,6 +61,10 @@ export const ContainerMainText = styled(motion.div)`
   p {
     text-align: justify;
     line-height: 1.4;
+  }
+
+  @media ${({ theme }) => theme.device.laptopS} {
+    width: 90%;
   }
 
   @media ${({ theme }) => theme.device.tabletL} {

@@ -14,7 +14,12 @@ export const ContainerSection = styled.section`
     padding: 6rem 0;
   }
 
+  @media ${({ theme }) => theme.device.laptopS} {
+    width: 90%;
+  }
+
   @media ${({ theme }) => theme.device.mobileL} {
+    width: 100%;
     padding: 3.5rem 0;
   }
   @media ${({ theme }) => theme.device.mobileM} {
@@ -38,7 +43,7 @@ export const ContainerMain = styled.div`
   justify-content: center;
   flex-direction: row;
 
-  @media ${({ theme }) => theme.device.tabletM} {
+  @media ${({ theme }) => theme.device.tabletL} {
     flex-direction: column;
   }
 `

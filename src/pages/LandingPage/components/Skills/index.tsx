@@ -9,7 +9,7 @@ import {
   ListSkills,
 } from './styles'
 
-import CodingSVG from '../../../../assets/Coding.svg'
+import CodingSVG from '../../../../assets/Coding-Max.svg'
 
 import { ScrollContext } from '../../../../contexts/scrollContext'
 import { SelectedPage } from '../../../../shared/types'

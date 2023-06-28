@@ -20,7 +20,7 @@ import {
 
 import { dataCertificates } from '../../../../database/dataCertificates'
 
-import CertificationSVG from '../../../../assets/Certification.svg'
+import CertificationSVG from '../../../../assets/Certification-Max.svg'
 import { ModalCertificate } from '../../../../components/ModalCertificate'
 
 export function Certificates() {

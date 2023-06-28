@@ -1,6 +1,11 @@
 import { useContext } from 'react'
 
-import HandCodingSVG from '../../../../assets/HandCoding.svg'
+import HandCodingSVG from '../../../../assets/hand-robo.png'
+import ReactSVG from '../../../../assets/react-icon.svg'
+import NodeSVG from '../../../../assets/node-icon.svg'
+import FigmaSVG from '../../../../assets/FigmaLogo.svg'
+import AWSSVG from '../../../../assets/aws-icon.svg'
+
 import { Badge } from '../../../../components/Badge'
 
 import {
@@ -14,6 +19,7 @@ import {
   TextStack,
   ContainerBadges,
   ContainerMainBadges,
+  WrapperIconsAnimation,
 } from './styles'
 
 import { ScrollContext } from '../../../../contexts/scrollContext'
@@ -25,19 +31,17 @@ export function Home() {
   return (
     <ContaienrSection id="home">
       <ContainerPresentation>
-        <WrapperImage
-          onViewportEnter={() => changeSelectedPage(SelectedPage.Home)}
-          initial="hidden"
-          whileInView="visible"
-          transition={{ duration: 1, ease: 'easeOut' }}
-          variants={{
-            hidden: { opacity: 0, x: -100 },
-            visible: { opacity: 1, x: 0 },
-          }}
-        >
+        <WrapperImage>
           <img src={HandCodingSVG} alt="Hand Coding" loading="lazy" />
+          <WrapperIconsAnimation>
+            <img src={ReactSVG} alt="React Icon" loading="lazy" />
+            <img src={NodeSVG} alt="Node.js Icon" loading="lazy" />
+            <img src={AWSSVG} alt="AWS Icon" loading="lazy" />
+            <img src={FigmaSVG} alt="Figma Icon" loading="lazy" />
+          </WrapperIconsAnimation>
         </WrapperImage>
         <WrapperTextPresentation
+          onViewportEnter={() => changeSelectedPage(SelectedPage.Home)}
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 1, ease: 'easeOut' }}
